@@ -1,0 +1,4 @@
+<center>
+        <a class="button" href="/shop">Go to the shop</a>
+        <a class="button" href="http://127.0.0.1:3000/">Visit forums</a>
+</center>

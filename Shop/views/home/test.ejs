@@ -1,0 +1,74 @@
+<!DOCTYPE html >
+
+<html xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+	<title>Home</title>
+	
+	<link rel="stylesheet" href="/ashwath/css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="script" src="/ashwath/js/jquery.min.js">
+	<style>
+		body{
+			background-image: url("/ashwath/images/bg10.png");
+			background-repeat: repeat;
+		}
+
+    </style>
+    <script>
+        var xhr=new XMLHttpRequest();
+        function starttimeout()
+        {
+            setTimeout(getbutton,1000);
+        }
+        function getbutton()
+        {
+            xhr.onreadystatechange=showbutton;
+            xhr.open("GET","/ashwath/buttons.txt",true);
+            xhr.send();
+        }
+        function showbutton()
+        {
+            if(xhr.readyState==4 && xhr.status==200)
+            {
+            var res=xhr.responseText;
+            document.getElementById("replace").innerHTML = res;
+            }
+            setTimeout(getPic,1000);
+        }
+    	
+        function getPic()
+        {
+            xhr.onreadystatechange=showPic;
+            xhr.open("GET","/ashwath/content.txt",true);
+            xhr.send();
+        }
+        function showPic()
+        {
+            if(xhr.readyState==4 && xhr.status==200)
+            {
+            document.getElementById("picture").innerHTML=xhr.responseText;
+            }
+        }	
+    </script>
+</head>
+
+<body onload="starttimeout()">
+	<center><h1 class = "welcome" style="background-color: #003049; color: ghostwhite;"> Welcome to E-mart</h1></center>
+	
+	<br><br>
+    <div id="picture">
+        <center>
+            <img src="/ashwath/loading.gif">
+        </center>
+    </div> 
+	
+	<br>
+	<div id="replace">
+
+    </div>
+
+</body>
+
+</html>

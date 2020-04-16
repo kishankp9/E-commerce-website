@@ -1,0 +1,80 @@
+*								{ margin: 0; padding: 0; }
+body							{background-image: url("bg.jpg");}
+a								{ text-decoration: none; outline: none; }
+a img							{ border: none; }
+
+h2								{ font-family: Georgia, Serif; font-size: 36px; text-align: center; 
+								  font-weight: normal; }
+
+#page-wrap						{  width: 960px; margin: 0 auto; 
+								  padding: 0px 0; }
+
+#slider							{ background: rgb(0, 0, 0) url(../images/slider-bg.jpg); height: 400px; overflow: hidden;
+								  position: relative; margin: 50px 0; background-repeat: no-repeat; background-size: cover;}
+								  
+                                /* DEFAULT is for three panels in width, adjust as needed
+                                   This only matters if JS is OFF, otherwise JS sets this. */								  
+#mover							{ width: 2880px; position: relative; }
+
+.slide							{ padding: 40px 30px; width: 900px; float: left; position: relative; }
+.slide h1						{ font-family: Helvetica, Sans-Serif; font-size: 30px; letter-spacing: -1px;
+								  color: #000000; }
+.slide p						{ color: rgb(0, 0, 0); font-size: 12px; line-height: 22px; width: 300px; }
+/* .slide img						{ position: absolute; top: 20px; left: 400px; } */
+#slider-stopper					{ position: absolute; top: 1px; right: 20px; background: #ac0000; color: white;
+								  padding: 3px 8px; font-size: 10px; text-transform: uppercase; z-index: 1000; }
+.slide-img{
+	padding-top: 50px;
+	max-height: 180px;
+	align-content: center;
+}
+.welcome{
+	font-family: 'Prata', serif;
+	margin-left: 550px;
+	margin-right: 550px;
+}
+.button {
+	background-color: #000000;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: 2.2em;
+	text-transform: uppercase;
+	width: 600px;
+  }
+  
+  .check {
+	transition: all linear 0.5s;
+	background-color: #f71735;
+	height: 100px;
+  }
+  
+  .ng-hide {
+	height: 0;
+  }
+  .textcheck{
+	background-color: #011627;
+	color: ghostwhite;
+	margin-right: 1200px;
+	font-family: 'Oswald', sans-serif;
+	  text-transform: uppercase;
+  }
+  .b{
+	  list-style-type: square;
+	  padding-left: 30px;
+	  
+  }
+.b li{
+	  color: white;
+	  font-weight: bold;
+	  font-size: 1.2em;
+	  
+  }
